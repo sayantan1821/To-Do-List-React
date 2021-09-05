@@ -2,6 +2,7 @@ import React from "react";
 import Tasks from "./Tasks";
 import { Paper, TextField } from "@material-ui/core";
 import { Checkbox, Button } from "@material-ui/core";
+import { getCurrentDate } from "./utils/Date";
 import "./App.css";
 
 class Todo extends Tasks {
@@ -32,7 +33,7 @@ class Todo extends Tasks {
                             variant="outlined"
                             type="submit"
                         >
-                            Add task
+                            Add 
                         </Button>
                     </form>
                     <div>
@@ -54,7 +55,9 @@ class Todo extends Tasks {
                                     }
                                 >
                                     {task.task}
+                                    
                                 </div>
+                                <p>[{task.date.toDateString()}]</p>
                                 <Button
                                     onClick={() => this.handleDelete(task._id)}
                                     color="secondary"
