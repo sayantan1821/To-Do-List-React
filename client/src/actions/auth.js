@@ -1,4 +1,3 @@
-import api from '../utils/api';
 import axios from 'axios';
 import { setAlert } from './alert';
 import setAuthToken from '../utils/setAuthToken';
@@ -8,8 +7,7 @@ import {
   USER_LOADED,
   AUTH_ERROR,
   LOGIN_SUCCESS,
-  LOGIN_FAIL,
-  LOGOUT
+  LOGIN_FAIL
 } from './types';
 
 // Load User

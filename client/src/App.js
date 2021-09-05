@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Todo from "./Todo";
 import login from "./auth/login";
 import register from "./auth/register";
@@ -7,7 +7,6 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 import { Provider } from "react-redux";
 import store from "./store";
-import { USER_LOADED } from "./actions/types";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 import Home from './utils/components/Home';

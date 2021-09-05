@@ -2,7 +2,6 @@ import React from "react";
 import Tasks from "./Tasks";
 import { Paper, TextField } from "@material-ui/core";
 import { Checkbox, Button } from "@material-ui/core";
-import { getCurrentDate } from "./utils/Date";
 import "./App.css";
 
 class Todo extends Tasks {
@@ -28,7 +27,7 @@ class Todo extends Tasks {
                             placeholder="Add New TO-DO"
                         />
                         <Button
-                            style={{ height: "40px" }}
+                            style={{ height: "40px", borderColor: '#38a1f3' }}
                             color="primary"
                             variant="outlined"
                             type="submit"
