@@ -10,6 +10,7 @@ import store from "./store";
 import { USER_LOADED } from "./actions/types";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
+import Home from './utils/components/Home';
 
 if(localStorage.token) {
   setAuthToken(localStorage.token)
@@ -25,9 +26,10 @@ const App = () => {
       <BrowserRouter>
       <Alert />
         <Switch>
-          <Route exact path="/" component={Todo} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/login" component={login} />
           <Route exact path="/register" component={register} />
+          <Route exact path="/todo" component={Todo} />
         </Switch>
       </BrowserRouter>
     </Provider>
